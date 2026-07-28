@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="header-container">
+      <header className="header-container">
         <div className="header-img">
           <Link to="/">
             <img src={logoFilme} />
@@ -154,7 +154,7 @@ export default function Header() {
             </svg>
           </Link>
         </div>
-      </div>
+      </header>
     </>
   );
 }

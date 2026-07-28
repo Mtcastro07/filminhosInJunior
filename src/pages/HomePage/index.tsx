@@ -1,10 +1,12 @@
 import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 export default function HomePage() {
   return (
     <>
       <Header />
-      <h1>Home Page</h1>
+      <main>Home Page</main>
+      <Footer />
     </>
   );
 }

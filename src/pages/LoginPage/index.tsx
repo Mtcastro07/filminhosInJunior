@@ -5,15 +5,12 @@ import { Link } from "react-router-dom";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-interface userData {
-  email: string;
-  password: string;
-}
-
 const createUserSchema = z.object({
-  email: z.email(),
-  password: z.string().min(9),
+  email: z.string().email("E-mail inválido"),
+  password: z.string().min(9, "A senha deve possuir no mínimo 9 characters"),
 });
+
+type CreateUserSchema = z.infer<typeof createUserSchema>;
 
 export default function Login() {
   const { register, handleSubmit, reset } = useForm({
@@ -21,7 +18,7 @@ export default function Login() {
   });
   const [mostrar, setMostrar] = useState(false);
 
-  function createUser(data: userData) {
+  function createUser(data: CreateUserSchema) {
     console.log(data);
     reset();
   }

@@ -1,0 +1,20 @@
+body {
+  height: 100%;
+}
+
+footer {
+  position: sticky;
+  top: 100vh;
+  margin: auto;
+  background-color: #9697f8;
+  margin: 0;
+}
+
+.footer-icons {
+  list-style: none;
+  display: flex;
+  gap: 32.5px;
+  align-items: flex-end;
+  justify-content: end;
+  padding: 22px 116px 22px 0px;
+}
