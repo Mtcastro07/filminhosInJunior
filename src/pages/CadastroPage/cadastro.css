@@ -1,0 +1,157 @@
+.cadastro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 57.5px 54px 57.5px;
+  opacity: 1;
+  box-shadow: 0px 0px 5px #afafaf;
+  border-radius: 12px;
+  gap: 15px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.cadastro-infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 153px;
+}
+
+.cadastro-container h3 {
+  width: 134px;
+  height: 61px;
+  opacity: 1;
+  top: 14px;
+  left: 133px;
+  column-span: 1;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+  align-items: flex-start;
+  margin-right: 290px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.register-form label {
+  width: 30;
+  height: 19;
+  opacity: 1;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: -2%;
+  margin-bottom: 2px;
+}
+
+.register-form input {
+  width: 384px;
+  height: 0px;
+  opacity: 1;
+  border-radius: 10px;
+  gap: 10px;
+  padding-top: 27px;
+  padding-right: 14px;
+  padding-bottom: 27px;
+  padding-left: 14px;
+  border: #edf1f3 solid 1px;
+  background-color: #ffffff;
+  outline: none;
+  font-family: inter;
+}
+
+.cadastro-button {
+  width: 414px;
+  height: 48px;
+  opacity: 1;
+  border-radius: 10px;
+  border: #ffffff solid 1px;
+  gap: 10px;
+  padding-top: 10px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+  background-color: #1b559d;
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -1%;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.cadastro-title {
+  font-family: Inter;
+  font-weight: 800;
+  font-style: Extra Bold;
+  font-size: 70px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  background-image: radial-gradient(circle, #00459a, #7189a7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.cadastro-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 190px;
+}
+
+.cadastro-link p {
+  width: 203px;
+  height: 22px;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+.login-link {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  width: 39px;
+  height: 22px;
+  opacity: 1;
+  text-decoration: none;
+}
+.register-password-input {
+  position: relative;
+}
+.icon-mostrar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

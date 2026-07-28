@@ -6,6 +6,7 @@ import ReviewsPage from "./pages/ReviewsPage";
 import WatchedPage from "./pages/WatchedPage";
 import UserPage from "./pages/UserPage";
 import Login from "./pages/LoginPage";
+import Cadastro from "./pages/CadastroPage";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/Login",
     element: <Login />,
+  },
+  {
+    path: "/Cadastro",
+    element: <Cadastro />,
   },
 ]);
 

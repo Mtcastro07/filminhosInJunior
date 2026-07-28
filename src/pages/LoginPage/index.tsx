@@ -2,12 +2,26 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
+import z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+interface userData {
+  email: string;
+  password: string;
+}
+
+const createUserSchema = z.object({
+  email: z.email(),
+  password: z.string().min(9),
+});
 
 export default function Login() {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm({
+    resolver: zodResolver(createUserSchema),
+  });
   const [mostrar, setMostrar] = useState(false);
 
-  function createUser(data) {
+  function createUser(data: userData) {
     console.log(data);
     reset();
   }
@@ -44,29 +58,31 @@ export default function Login() {
             <div>
               <label className="input-label">Senha</label>
               <br />
-              <input
-                type={mostrar ? "text" : "password"}
-                placeholder="Insira sua senha"
-                {...register("password")}
-                className="form-input"
-              ></input>
-              <svg
-                onClick={() => setMostrar(!mostrar)}
-                className="display-icon"
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.70673 5.70797C5.45672 5.95807 5.3163 6.29724 5.31637 6.65087C5.31643 7.0045 5.45697 7.34362 5.70707 7.59363C5.95717 7.84364 6.29634 7.98406 6.64997 7.984C7.0036 7.98394 7.34272 7.8434 7.59273 7.5933M9.77069 9.76538C8.83552 10.3505 7.75313 10.6573 6.65002 10.65C4.25002 10.65 2.25002 9.31671 0.650024 6.65004C1.49802 5.23671 2.45802 4.19804 3.53002 3.53404M5.43669 2.77004C5.83605 2.6892 6.24257 2.64899 6.65002 2.65004C9.05002 2.65004 11.05 3.98338 12.65 6.65004C12.206 7.39004 11.7307 8.02804 11.2247 8.56338M0.650024 0.650024L12.65 12.65"
-                  stroke="#ACB5BB"
-                  stroke-width="1.3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <div className="password-input">
+                <input
+                  type={mostrar ? "text" : "password"}
+                  placeholder="Insira sua senha"
+                  {...register("password")}
+                  className="form-input"
+                ></input>
+                <svg
+                  onClick={() => setMostrar(!mostrar)}
+                  className="display-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.70673 5.70797C5.45672 5.95807 5.3163 6.29724 5.31637 6.65087C5.31643 7.0045 5.45697 7.34362 5.70707 7.59363C5.95717 7.84364 6.29634 7.98406 6.64997 7.984C7.0036 7.98394 7.34272 7.8434 7.59273 7.5933M9.77069 9.76538C8.83552 10.3505 7.75313 10.6573 6.65002 10.65C4.25002 10.65 2.25002 9.31671 0.650024 6.65004C1.49802 5.23671 2.45802 4.19804 3.53002 3.53404M5.43669 2.77004C5.83605 2.6892 6.24257 2.64899 6.65002 2.65004C9.05002 2.65004 11.05 3.98338 12.65 6.65004C12.206 7.39004 11.7307 8.02804 11.2247 8.56338M0.650024 0.650024L12.65 12.65"
+                    stroke="#ACB5BB"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
             <div className="stay-forget">
               <div className="stay-connected">
