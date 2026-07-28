@@ -94,6 +94,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  box-sizing: border-box;
 }
 
 .form-input {
@@ -203,7 +204,11 @@ body {
 
 .display-icon {
   position: absolute;
-  top: 500.5px;
-  right: 503px;
   cursor: pointer;
+  right: 20px;
+  top: 20px;
+}
+
+.password-input {
+  position: relative;
 }
