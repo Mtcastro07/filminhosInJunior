@@ -1,0 +1,319 @@
+.imageFilm-individual-page {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imageFilm-individual-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageFilm-individual-page::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 180px;
+
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #d9f2ff);
+}
+
+.icons-individual-page {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.title-icons-individual-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 37px 100px 53px 100px;
+}
+
+.title-individual-page {
+  width: 462;
+  height: 77;
+  angle: 0 deg;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 64px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.infos-individual-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 53px 100px 68px 100px;
+}
+
+.year-duration-sinopse {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.year-individual-page,
+.duration-individual-page {
+  width: 321;
+  height: 39;
+  angle: 0 deg;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
+  leading-trim: NONE;
+  line-height: 39px;
+  letter-spacing: 0%;
+}
+
+.sinopse-individual-page {
+  width: 636;
+  height: 156;
+  angle: 0 deg;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.age-individual-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.age-rating {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background-color: #caca32;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 3px;
+}
+
+.warning-rate {
+  width: 137;
+  height: 39;
+  angle: 0 deg;
+  opacity: 1;
+  top: 1px;
+  left: 48px;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.casting {
+  width: 525;
+  height: 27;
+  angle: 0 deg;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.genres-list {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  width: 475;
+  height: 58;
+  angle: 0 deg;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  gap: 5px;
+}
+
+.genre-span {
+  width: 475;
+  height: 58;
+  angle: 0 deg;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.ratings-individual-page {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 0px 100px 50px 0px;
+}
+
+.icon-rating-individual-page {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+}
+
+.reviewButton-individual-page {
+  background-color: #3539ef;
+  align-items: center;
+  justify-content: center;
+  padding: 28.5px 82px 28.5px 82px;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 36px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  border-radius: 1000px;
+  cursor: pointer;
+  margin-top: 68px;
+  border: none;
+}
+
+.rating-numbers-individual-page {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 396;
+  height: 23;
+  angle: 0 deg;
+  opacity: 1;
+}
+
+.title-reviews-individual-page {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 50px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 1240;
+  height: 61;
+  angle: 0 deg;
+  opacity: 1;
+  padding: 0px 0px 55px 100px;
+}
+
+.reviews-individual-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  list-style: none;
+}
+
+.review-individual-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 32px;
+  max-width: 2190px;
+  width: 100%;
+  max-height: 267;
+  height: 100%;
+  angle: 0 deg;
+  opacity: 1;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 5px 5px 1px rgb(174, 174, 174);
+}
+
+.user-name-individual-page {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.user-rating-individual-page {
+  display: flex;
+  flex: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+.user-name-individual-page p {
+  width: 144;
+  height: 22;
+  angle: 0 deg;
+  opacity: 1;
+  top: 29px;
+  left: 96px;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.user-synopsis {
+  width: 1090;
+  height: 120.5;
+  angle: 0 deg;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-bottom: 22.5px;
+}
+
+.user-name-individual-page img {
+  width: 80;
+  height: 80;
+  angle: 0 deg;
+  opacity: 1;
+  border-radius: 50px;
+}

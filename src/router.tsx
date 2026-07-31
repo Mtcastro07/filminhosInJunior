@@ -7,6 +7,7 @@ import WatchedPage from "./pages/WatchedPage";
 import UserPage from "./pages/UserPage";
 import Login from "./pages/LoginPage";
 import Cadastro from "./pages/CadastroPage";
+import SearchPage from "./pages/SearchPage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,14 @@ const router = createBrowserRouter([
   {
     path: "/Cadastro",
     element: <Cadastro />,
+  },
+  {
+    path: "/Search",
+    element: <SearchPage />,
+  },
+  {
+    path: "/movies/:id",
+    element: <IndividualPage />,
   },
 ]);
 
