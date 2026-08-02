@@ -77,8 +77,21 @@ export interface RespostaFilmes {
   metadata: Metadata;
 }
 
-export async function listarFilmes() {
-  const response = await api.get<RespostaFilmes>("/movies");
+export interface FiltrosFilmes {
+  q?: string;
+  genreIds?: number[];
+  page?: number;
+  perPage?: number;
+}
+
+export async function listarFilmes(filtros?: FiltrosFilmes) {
+  const response = await api.get<RespostaFilmes>("/movies", {
+    params: filtros,
+
+    paramsSerializer: {
+      indexes: false,
+    },
+  });
 
   return response.data.data;
 }
