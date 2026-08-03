@@ -54,9 +54,13 @@ export interface generos {
 export interface Filme {
   id: number;
   title: string;
-  posterImageUrl: string;
+  posterImageUrl: string | null;
   releaseYear: number;
   genres: generos[];
+}
+
+export interface RespostaFilmeDestaque {
+  data: Filme[];
 }
 
 export interface Metadata {
@@ -104,9 +108,26 @@ export async function listarFilme(id: number) {
 export async function listarReviewsFilme(id: number) {
   const response = await api.get<respostaFilmeReview>("/reviews", {
     params: {
-      id,
+      movieId: id,
     },
   });
 
+  return response.data.data;
+}
+
+export async function listarReviewsTotal() {
+  const response = await api.get<respostaFilmeReview>("/reviews", {
+    params: {
+      perPage: 10,
+    },
+  });
+
+  return response.data.data;
+}
+
+export async function listarFilmesDestaque(count: number) {
+  const response = await api.get<RespostaFilmeDestaque>("/movies/featured", {
+    params: { count: count },
+  });
   return response.data.data;
 }

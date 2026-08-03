@@ -8,7 +8,7 @@ import type { filmeIndividual } from "../../services/filmes";
 import type { filmeReview } from "../../services/filmes";
 import { listarReviewsFilme } from "../../services/filmes";
 
-export default function IndividualPage() {
+export function IndividualPage() {
   const { id } = useParams();
   const [filme, setFilme] = useState<filmeIndividual | null>(null);
   const [reviews, setReviews] = useState<filmeReview[] | null>(null);
@@ -78,7 +78,7 @@ export default function IndividualPage() {
   }
 
   function ratingByUser(rate: number, prop: any) {
-    if (prop.rating >= rate && prop.rating != null) {
+    if (prop.rating <= rate && prop.rating != null) {
       return (
         <svg
           width="69"

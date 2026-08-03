@@ -170,6 +170,7 @@ export default function searchPage() {
                   />
                 </svg>
               </div>
+              <p className="modal-genre-p">Gênero:</p>
               <div className="modal-genres">
                 {generos.map((genero) => (
                   <button

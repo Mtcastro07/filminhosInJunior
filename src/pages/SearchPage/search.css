@@ -178,3 +178,14 @@
   gap: 34px;
   grid-template-columns: repeat(4, 300px);
 }
+
+.modal-genre-p {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-bottom: 55px;
+}

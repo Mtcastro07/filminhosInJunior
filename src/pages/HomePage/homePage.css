@@ -1,0 +1,85 @@
+.reviews-container-home {
+  display: flex;
+  gap: 34px;
+  padding: 32px;
+  background-color: white;
+  width: 1240px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 7px;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.reviews-list-home {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 55px;
+}
+
+.reviews-list-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-home-image {
+  width: 184px;
+  height: 245px;
+}
+
+.review-home-title-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.review-home-userInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+.review-home-userPhoto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-home-textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.review-home-titleSection {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 50px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 55px;
+  background: linear-gradient(to right, #000000, #1b559d);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
