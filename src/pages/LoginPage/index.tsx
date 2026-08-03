@@ -4,6 +4,8 @@ import "./login.css";
 import { Link } from "react-router-dom";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useLogin } from "../../hooks/useLogin";
+import { useNavigate } from "react-router-dom";
 
 const createUserSchema = z.object({
   email: z.string().email("E-mail inválido"),
@@ -13,13 +15,30 @@ const createUserSchema = z.object({
 type CreateUserSchema = z.infer<typeof createUserSchema>;
 
 export default function Login() {
+  const loginMutation = useLogin();
+  const navigate = useNavigate();
+
   const { register, handleSubmit, reset } = useForm({
     resolver: zodResolver(createUserSchema),
   });
   const [mostrar, setMostrar] = useState(false);
 
-  function createUser(data: CreateUserSchema) {
-    console.log(data);
+  function onSubmit(data: CreateUserSchema) {
+    loginMutation.mutate(
+      {
+        email: data.email,
+        password: data.password,
+      },
+      {
+        onSuccess: () => {
+          navigate("/");
+        },
+
+        onError: (error) => {
+          console.error("Erro ao realizar login:", error);
+        },
+      },
+    );
     reset();
   }
 
@@ -41,7 +60,7 @@ export default function Login() {
             </p>
           </div>
 
-          <form className="form" onSubmit={handleSubmit(createUser)}>
+          <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <div>
               <label className="input-label">Email</label>
               <br />
@@ -88,6 +107,9 @@ export default function Login() {
               </div>
               <div className="forget-password">Esqueceu a senha?</div>
             </div>
+            {loginMutation.isError && (
+              <p className="login-error">E-mail ou senha inválidos.</p>
+            )}
             <div>
               <button type="submit" className="form-button">
                 Log In

@@ -1,0 +1,101 @@
+.modal-review-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+.modal-review {
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+  background: linear-gradient(to bottom, #a3d7eb, white);
+  width: 1173px;
+  height: 1008px;
+  border-radius: 12px;
+  padding: 64px;
+}
+
+.fechar-create-review,
+.titulo-create-review,
+.textarea-create-review {
+  align-self: flex-start;
+}
+.submit-create-review {
+  align-self: flex-end;
+}
+
+.titulo-create-review {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.textarea-create-review {
+  width: 1110px;
+  height: 410px;
+  border-radius: 12px;
+  padding: 32px;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 36px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  outline: none;
+  resize: none;
+  border: solid 2px black;
+}
+
+.submit-create-review {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1419ae;
+  color: white;
+  width: 154px;
+  height: 63px;
+  border-radius: 1000px;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.fechar-create-review {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.rating-create-review-item {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.button-create-review {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

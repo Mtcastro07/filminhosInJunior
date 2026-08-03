@@ -82,7 +82,7 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="line-content-dropdown">
-                      <Link to="" className="line-itens">
+                      <Link to="/Reviews" className="line-itens">
                         <svg
                           width="31"
                           height="29"

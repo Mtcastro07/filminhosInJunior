@@ -7,8 +7,10 @@ import { useEffect, useState } from "react";
 import type { filmeIndividual } from "../../services/filmes";
 import type { filmeReview } from "../../services/filmes";
 import { listarReviewsFilme } from "../../services/filmes";
+import ModalReview from "../../components/ModalReview";
 
 export function IndividualPage() {
+  const [modalAberto, setModalAberto] = useState(false);
   const { id } = useParams();
   const [filme, setFilme] = useState<filmeIndividual | null>(null);
   const [reviews, setReviews] = useState<filmeReview[] | null>(null);
@@ -172,7 +174,8 @@ export function IndividualPage() {
           <ul className="year-duration-sinopse">
             <li className="year-individual-page">Ano: {filme.releaseYear}</li>
             <li className="duration-individual-page">
-              Duração: {filme.durationMinutes} min
+              Duração: {Math.trunc(filme.durationMinutes / 60)}h{" "}
+              {filme.durationMinutes % 60} min
             </li>
             <li className="age-individual-page">
               <div className="age-rating">{filme.ageRating}</div>
@@ -207,10 +210,19 @@ export function IndividualPage() {
           <div className="rating-numbers-individual-page">
             {filme.reviewCount} Avaliações
           </div>
-          <button className="reviewButton-individual-page">
+          <button
+            className="reviewButton-individual-page"
+            onClick={() => setModalAberto(!modalAberto)}
+          >
             Criar uma review
           </button>
         </div>
+        {modalAberto && (
+          <ModalReview
+            movieId={Number(id)}
+            fecharModal={() => setModalAberto(false)}
+          />
+        )}
         <div className="users-rating-individual-page">
           <h1 className="title-reviews-individual-page">Reviews</h1>
           <ul className="reviews-individual-page">

@@ -11,6 +11,7 @@
   background-color: #a3d7eb;
   margin: 0;
   box-sizing: border-box;
+  z-index: 100000;
 }
 
 .header-dropdown {
