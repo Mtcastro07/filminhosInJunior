@@ -4,10 +4,14 @@ import Header from "../../components/header";
 import { useMinhasReviews } from "../../hooks/useMinhasReviews";
 import "./review.css";
 import { useState } from "react";
+import { useExcluirReview } from "../../hooks/useExcluirReview";
 import type { filmeReview } from "../../services/filmes";
+import ModalEditarReview from "../../components/ModalEditarReview";
 
 export default function ReviewsPage() {
   const [reviewExcluir, setReviewExcluir] = useState<filmeReview | null>(null);
+  const [reviewEditar, setReviewEditar] = useState<filmeReview | null>(null);
+  const excluirMutation = useExcluirReview();
 
   function ratingByUser(rate: number, extimate: any) {
     if (extimate <= rate && extimate != null) {
@@ -91,7 +95,7 @@ export default function ReviewsPage() {
                 </div>
 
                 <div className="buttons-user-review">
-                  <button>
+                  <button onClick={() => setReviewEditar(review)}>
                     <svg
                       width="33"
                       height="38"
@@ -163,12 +167,29 @@ export default function ReviewsPage() {
                 Cancelar
               </button>
 
-              <button className="apagar-button-modal-excluir">
+              <button
+                className="apagar-button-modal-excluir"
+                onClick={() => {
+                  if (reviewExcluir) {
+                    excluirMutation.mutate(reviewExcluir.id, {
+                      onSuccess: () => {
+                        setReviewExcluir(null);
+                      },
+                    });
+                  }
+                }}
+              >
                 Apagar Avaliação
               </button>
             </div>
           </div>
         </div>
+      )}
+      {reviewEditar && (
+        <ModalEditarReview
+          review={reviewEditar}
+          fecharModal={() => setReviewEditar(null)}
+        />
       )}
       <Footer />
     </>
