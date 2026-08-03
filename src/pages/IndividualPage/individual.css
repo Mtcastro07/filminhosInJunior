@@ -184,6 +184,13 @@
   flex-direction: column;
   align-items: end;
   padding: 0px 100px 50px 0px;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 64px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .icon-rating-individual-page {
@@ -213,6 +220,9 @@
 }
 
 .rating-numbers-individual-page {
+  position: absolute;
+  top: 2110px;
+  right: 390px;
   font-family: Inter;
   font-weight: 400;
   font-style: Regular;
@@ -316,4 +326,8 @@
   angle: 0 deg;
   opacity: 1;
   border-radius: 50px;
+}
+
+.users-rating-individual-page {
+  padding-bottom: 55px;
 }

@@ -78,7 +78,7 @@ export function IndividualPage() {
   }
 
   function ratingByUser(rate: number, prop: any) {
-    if (prop.rating <= rate && prop.rating != null) {
+    if (prop.rating >= rate && prop.rating != null) {
       return (
         <svg
           width="69"
