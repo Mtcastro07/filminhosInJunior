@@ -69,3 +69,7 @@ export async function buscarPerfil() {
 
   return response.data.data;
 }
+
+export async function logout() {
+  await api.post("/account/logout");
+}

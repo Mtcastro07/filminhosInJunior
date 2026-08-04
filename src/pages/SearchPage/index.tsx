@@ -15,6 +15,11 @@ export default function searchPage() {
   const [modalAberto, setModalAberto] = useState(false);
   const [generos, setGeneros] = useState<genero[]>([]);
 
+  function limparFiltros() {
+    setBusca("");
+    setGenerosSelecionados([]);
+  }
+
   function selecionarGenero(id: number) {
     if (generosSelecionados.includes(id)) {
       setGenerosSelecionados(
@@ -218,6 +223,17 @@ export default function searchPage() {
                     {genero.name}
                   </button>
                 ))}
+              </div>
+              <div className="modal-search-bottom-buttons">
+                <button className="clear-search-button" onClick={limparFiltros}>
+                  Apagar Todos os Filtros
+                </button>
+                <button
+                  className="concluir-search-button"
+                  onClick={() => setModalAberto(!modalAberto)}
+                >
+                  Concluir
+                </button>
               </div>
             </div>
           </div>

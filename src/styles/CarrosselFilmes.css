@@ -1,6 +1,13 @@
 .user-carousel {
+  position: relative;
   width: 100%;
   margin: 60px 0;
+  padding: 0;
+}
+
+.user-carousel {
+  padding-right: 40px;
+  margin-right: 50px;
 }
 
 .user-carousel-title {
@@ -14,13 +21,14 @@
 }
 
 .user-carousel-viewport {
-  width: 100%;
+  width: 70%;
   overflow: hidden;
 }
 
 .user-carousel-track {
   display: flex;
   gap: 30px;
+  transition: transform 0.4s ease;
 }
 
 .user-carousel-card {
@@ -37,4 +45,107 @@
   height: 100%;
 
   object-fit: cover;
+}
+
+.user-review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-review-card {
+  display: flex;
+  gap: 24px;
+  margin: 58px 100px 58px 100px;
+  padding: 32px;
+  background-color: #00000011;
+  border-radius: 20px;
+  box-shadow: 2px 4px 70px #00000040;
+}
+
+.user-review-image,
+.user-review-link {
+  width: 184px;
+  height: 245px;
+}
+
+.user-review-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-review-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.title-user-review-page {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 30px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.year-user-review-page {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 30px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.user-review-text {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.user-title-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 50px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  background: linear-gradient(to right, #000000, #1b559d);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.user-carousel-left,
+.user-carousel-right {
+  position: absolute;
+  top: 50%;
+}
+
+.user-carousel-left {
+  left: -2.3%;
+  z-index: 1000;
+}
+
+.user-carousel-right {
+  right: 4.4%;
 }

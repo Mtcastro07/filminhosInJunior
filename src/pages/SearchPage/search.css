@@ -127,6 +127,7 @@
   background: linear-gradient(#a3d7eb, #ffffff);
   padding: 64px;
   border-radius: 12px;
+  z-index: 1000;
 }
 
 .modal-buttons {
@@ -188,4 +189,47 @@
   line-height: 100%;
   letter-spacing: 0%;
   padding-bottom: 55px;
+}
+
+.modal-search-bottom-buttons {
+  display: flex;
+  align-self: flex-end;
+  padding-left: 1110px;
+  padding-top: 90px;
+  gap: 36px;
+}
+
+.clear-search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 27px;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  background-color: #71090c;
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.concluir-search-button {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  background-color: #1419ae;
+  border-radius: 1000px;
+  padding: 17px 27px;
+  border: none;
+  cursor: pointer;
 }
