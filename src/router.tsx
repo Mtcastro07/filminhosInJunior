@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <IndividualPage />,
   },
   {
-    path: "/Likes",
+    path: "/Favoritos",
     element: <LikesPage />,
   },
   {
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <ReviewsPage />,
   },
   {
-    path: "/Watched",
+    path: "/Assistidos",
     element: <WatchedPage />,
   },
   {

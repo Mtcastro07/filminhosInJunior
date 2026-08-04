@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { listarAssistidos } from "../services/listas";
+import { listarAssistidos } from "../services/assistidos";
 
-export function useAssistidos(search: string = "") {
+export function useAssistidos(search: string) {
   return useQuery({
     queryKey: ["assistidos", search],
 

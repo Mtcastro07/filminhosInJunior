@@ -5,17 +5,11 @@ export function useRemoverFavorito() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (movieId: number) => {
-      return removerFavorito(movieId);
-    },
+    mutationFn: removerFavorito,
 
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["favoritos"],
-      });
-
-      queryClient.invalidateQueries({
-        queryKey: ["filme"],
       });
     },
   });

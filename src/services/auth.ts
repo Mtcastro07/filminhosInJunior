@@ -9,6 +9,20 @@ export interface Usuario {
   initials: string;
 }
 
+export interface PerfilUsuario {
+  id: number;
+  fullName: string;
+  email: string;
+  avatarUrl: string | null;
+  createdAt: string;
+  updatedAt: string;
+  initials: string;
+}
+
+interface RespostaPerfil {
+  data: PerfilUsuario;
+}
+
 export interface DadosLogin {
   email: string;
   password: string;
@@ -46,6 +60,12 @@ export async function cadastrar(dados: DadosCadastro) {
 
 export async function buscarProfile() {
   const response = await api.get<RespostaProfile>("/account/profile");
+
+  return response.data.data;
+}
+
+export async function buscarPerfil() {
+  const response = await api.get<RespostaPerfil>("/account/profile");
 
   return response.data.data;
 }

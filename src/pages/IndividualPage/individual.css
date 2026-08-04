@@ -108,7 +108,6 @@
   leading-trim: NONE;
   line-height: 100%;
   letter-spacing: 0%;
-  background-color: #caca32;
   width: 32px;
   height: 32px;
   align-items: center;
@@ -220,9 +219,6 @@
 }
 
 .rating-numbers-individual-page {
-  position: absolute;
-  top: 2110px;
-  right: 390px;
   font-family: Inter;
   font-weight: 400;
   font-style: Regular;
@@ -234,6 +230,7 @@
   height: 23;
   angle: 0 deg;
   opacity: 1;
+  padding-right: 200px;
 }
 
 .title-reviews-individual-page {
@@ -330,4 +327,37 @@
 
 .users-rating-individual-page {
   padding-bottom: 55px;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.icon-individual-page {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.livre {
+  background-color: green;
+}
+
+.dez-anos {
+  background-color: #3595ef;
+}
+
+.doze-anos {
+  background-color: #caca32;
+}
+
+.quatorze-anos {
+  background-color: orange;
+}
+
+.dezesseis-anos {
+  background-color: red;
+}
+
+.dezoito-anos {
+  background-color: black;
+  color: white;
 }

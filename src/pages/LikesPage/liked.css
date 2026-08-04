@@ -1,0 +1,66 @@
+.titulo-liked-list {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 64px;
+  leading-trim: NONE;
+  line-height: 100%;
+  padding: 84px 0px 84px 100px;
+  letter-spacing: 0%;
+}
+
+.search-liked-list {
+  width: 1440px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  border: solid #10840c 3px;
+  background-color: white;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-left: 77px;
+}
+
+.input-icon-liked-list {
+  position: relative;
+  width: min(1440px, 90%);
+  margin: 0 auto;
+}
+
+.liked-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0px 90px 0px;
+}
+
+.liked-card {
+  position: relative;
+  width: 220px;
+  height: 349px;
+}
+
+.liked-remove {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.liked-link,
+.liked-img-film {
+  width: 220px;
+  height: 349px;
+}

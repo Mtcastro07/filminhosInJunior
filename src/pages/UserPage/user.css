@@ -1,0 +1,51 @@
+.user-image {
+  width: 300;
+  height: 300;
+  left: 583px;
+  angle: 0 deg;
+  opacity: 1;
+  border-radius: 100 0px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.user-name {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 64px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: -0.2px;
+}
+
+.user-profile-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-lower {
+  background-color: #7189a7;
+  width: 247px;
+  height: 6px;
+  angle: 0 deg;
+  opacity: 1;
+  border-radius: 14px;
+  color: transparent;
+}
+
+.title-carrossel {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 30px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.carrossel-container {
+  padding-left: 100px;
+}

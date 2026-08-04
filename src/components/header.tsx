@@ -45,7 +45,7 @@ export default function Header() {
                 <div className="header-dropdown">
                   <ul className="dropdown">
                     <li className="line-content-dropdown">
-                      <Link to="" className="line-itens">
+                      <Link to="/Favoritos" className="line-itens">
                         <svg
                           width="34"
                           height="31"
@@ -65,7 +65,7 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="line-content-dropdown">
-                      <Link to="" className="line-itens">
+                      <Link to="/Assistidos" className="line-itens">
                         <svg
                           width="32"
                           height="22"
