@@ -7,7 +7,7 @@ interface Props {
   filmes: Filme[];
 }
 
-export default function CarrosselFilmes({ titulo, filmes }: Props) {
+export default function CarrosselFilmes({ filmes }: Props) {
   const [posicao, setPosicao] = useState(0);
   function moverDireita() {
     if (posicao < filmes.length - 1) {
