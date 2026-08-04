@@ -2,10 +2,19 @@ import "../styles/header.css";
 import logoFilme from "../assets/logoFime.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuthStore } from "../stores/authStore";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [texto, setText] = useState("");
   const [aberto, setAberto] = useState(false);
+  const clearAuth = useAuthStore((state) => state.clearAuth);
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    clearAuth();
+    navigate("/Login");
+  }
 
   return (
     <>
@@ -99,7 +108,7 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="line-content-dropdown">
-                      <Link to="" className="line-itens">
+                      <button className="line-itens" onClick={handleLogout}>
                         <svg
                           width="30"
                           height="30"
@@ -131,7 +140,7 @@ export default function Header() {
                         </svg>
 
                         <p>Sair</p>
-                      </Link>
+                      </button>
                     </li>
                   </ul>
                 </div>

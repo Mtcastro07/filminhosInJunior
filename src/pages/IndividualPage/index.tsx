@@ -120,7 +120,7 @@ export function IndividualPage() {
   }
 
   function ratingByUsers(rate: number, prop: any) {
-    if (prop.avgRating >= rate && prop.rating != null) {
+    if (prop.avgRating != null && Number(prop.avgRating) >= rate) {
       return (
         <svg
           width="69"

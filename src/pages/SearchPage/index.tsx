@@ -15,6 +15,11 @@ export default function searchPage() {
   const [modalAberto, setModalAberto] = useState(false);
   const [generos, setGeneros] = useState<genero[]>([]);
 
+  function limparFiltros() {
+    setBusca("");
+    setGenerosSelecionados([]);
+  }
+
   function selecionarGenero(id: number) {
     if (generosSelecionados.includes(id)) {
       setGenerosSelecionados(
@@ -219,6 +224,17 @@ export default function searchPage() {
                   </button>
                 ))}
               </div>
+              <div className="modal-search-bottom-buttons">
+                <button className="clear-search-button" onClick={limparFiltros}>
+                  Apagar Todos os Filtros
+                </button>
+                <button
+                  className="concluir-search-button"
+                  onClick={() => setModalAberto(!modalAberto)}
+                >
+                  Concluir
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -227,7 +243,7 @@ export default function searchPage() {
           {filmes.map((filme) => (
             <li key={filme.id} className="cardFilm-searchPage-page">
               <Link to={`/movies/${filme.id}`}>
-                <img className="" src={filme.posterImageUrl} />
+                <img className="" src={filme.posterImageUrl ?? undefined} />
               </Link>
             </li>
           ))}

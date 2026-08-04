@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+
 import HomePage from "./pages/HomePage";
 import { IndividualPage } from "./pages/IndividualPage";
 import LikesPage from "./pages/LikesPage";
@@ -9,46 +10,67 @@ import Login from "./pages/LoginPage";
 import Cadastro from "./pages/CadastroPage";
 import SearchPage from "./pages/SearchPage";
 
+import RequireAuth from "./components/RequireAuth";
+
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/Individual",
-    element: <IndividualPage />,
-  },
-  {
-    path: "/Favoritos",
-    element: <LikesPage />,
-  },
-  {
-    path: "/Reviews",
-    element: <ReviewsPage />,
-  },
-  {
-    path: "/Assistidos",
-    element: <WatchedPage />,
-  },
-  {
-    path: "/User",
-    element: <UserPage />,
-  },
+  // ROTAS QUE NÃO PRECISAM DE LOGIN
+
   {
     path: "/Login",
     element: <Login />,
   },
+
   {
     path: "/Cadastro",
     element: <Cadastro />,
   },
+
+  // ROTAS QUE PRECISAM DE LOGIN
+
   {
-    path: "/Search",
-    element: <SearchPage />,
-  },
-  {
-    path: "/movies/:id",
-    element: <IndividualPage />,
+    element: <RequireAuth />,
+
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+
+      {
+        path: "/Individual",
+        element: <IndividualPage />,
+      },
+
+      {
+        path: "/Favoritos",
+        element: <LikesPage />,
+      },
+
+      {
+        path: "/Reviews",
+        element: <ReviewsPage />,
+      },
+
+      {
+        path: "/Assistidos",
+        element: <WatchedPage />,
+      },
+
+      {
+        path: "/User",
+        element: <UserPage />,
+      },
+
+      {
+        path: "/Search",
+        element: <SearchPage />,
+      },
+
+      {
+        path: "/movies/:id",
+        element: <IndividualPage />,
+      },
+    ],
   },
 ]);
 

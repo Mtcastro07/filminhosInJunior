@@ -10,11 +10,9 @@
 }
 
 .search-watched-list {
-  width: 1440px;
+  width: 1640px;
   height: 70px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 1000px;
   border: solid #10840c 3px;
   background-color: white;
@@ -31,7 +29,7 @@
 .input-icon-watched {
   position: relative;
   width: min(1440px, 90%);
-  margin: 0 auto;
+  margin-left: 100px;
 }
 
 .icon-seach-watched-list {
@@ -44,11 +42,9 @@
 
 .watched-grid {
   display: grid;
-  grid-template-columns: repeat(4, 220px);
+  grid-template-columns: repeat(5, 220px);
   gap: 35px;
-  justify-content: center;
-  align-items: center;
-  padding: 90px 0px 90px 0px;
+  padding: 90px 100px 90px 100px;
 }
 
 .watched-card {
@@ -71,4 +67,33 @@
 .watched-img-film {
   width: 220px;
   height: 349px;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0;
+}
+
+.paginacao button {
+  border: none;
+  cursor: pointer;
+}
+
+.pagina,
+.pagina-ativa {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.pagina {
+  background-color: #c4c4c4;
+}
+
+.pagina-ativa {
+  background-color: #3539ef;
+  color: white;
 }

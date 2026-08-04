@@ -8,7 +8,7 @@ export interface filmeIndividual {
   bannerImageUrl?: string | null;
   releaseYear: number;
   durationMinutes: number;
-  ageRating: number;
+  ageRating: number | string;
   contentWarning: string;
   cast: string;
   createdAt: string;
