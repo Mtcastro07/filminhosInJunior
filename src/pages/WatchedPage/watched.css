@@ -68,3 +68,32 @@
   width: 220px;
   height: 349px;
 }
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0;
+}
+
+.paginacao button {
+  border: none;
+  cursor: pointer;
+}
+
+.pagina,
+.pagina-ativa {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.pagina {
+  background-color: #c4c4c4;
+}
+
+.pagina-ativa {
+  background-color: #3539ef;
+  color: white;
+}

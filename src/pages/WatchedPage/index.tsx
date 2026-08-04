@@ -11,6 +11,8 @@ import "./watched.css";
 
 export default function WatchedPage() {
   const [search, setSearch] = useState("");
+  const [pagina, setPagina] = useState(1);
+  const totalPaginas = 5;
 
   const { data, isError } = useAssistidos(search);
 
@@ -91,7 +93,32 @@ export default function WatchedPage() {
           ))}
         </div>
       </main>
+      <div className="paginacao">
+        <button onClick={() => setPagina(pagina - 1)} disabled={pagina === 1}>
+          ❮
+        </button>
 
+        {Array.from({ length: totalPaginas }, (_, index) => {
+          const numero = index + 1;
+
+          return (
+            <button
+              key={numero}
+              onClick={() => setPagina(numero)}
+              className={pagina === numero ? "pagina-ativa" : "pagina"}
+            >
+              {numero}
+            </button>
+          );
+        })}
+
+        <button
+          onClick={() => setPagina(pagina + 1)}
+          disabled={pagina === totalPaginas}
+        >
+          ❯
+        </button>
+      </div>
       <Footer />
     </>
   );
