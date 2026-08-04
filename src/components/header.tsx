@@ -2,14 +2,12 @@ import "../styles/header.css";
 import logoFilme from "../assets/logoFime.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useLogout } from "../hooks/useLogout";
 import { useAuthStore } from "../stores/authStore";
 import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [texto, setText] = useState("");
   const [aberto, setAberto] = useState(false);
-  const logoutMutation = useLogout();
   const clearAuth = useAuthStore((state) => state.clearAuth);
   const navigate = useNavigate();
 

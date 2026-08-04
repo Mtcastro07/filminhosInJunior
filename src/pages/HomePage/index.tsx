@@ -70,7 +70,7 @@ export default function HomePage() {
             <li key={review.id} className="reviews-container-home">
               <img
                 className="review-home-image"
-                src={review.movie.posterImageUrl}
+                src={review.movie.posterImageUrl ?? undefined}
                 alt={review.movie.title + "Foto"}
               ></img>
               <div className="review-home-textContent">

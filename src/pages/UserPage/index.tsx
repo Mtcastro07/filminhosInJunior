@@ -59,7 +59,7 @@ export default function UserPage() {
           <div className="user-profile-avatar">
             <img
               className="user-image"
-              src={user?.avatarUrl}
+              src={user?.avatarUrl ?? undefined}
               alt="User Photo"
             ></img>
             <h1 className="user-name">{user?.fullName}</h1>

@@ -243,7 +243,7 @@ export default function searchPage() {
           {filmes.map((filme) => (
             <li key={filme.id} className="cardFilm-searchPage-page">
               <Link to={`/movies/${filme.id}`}>
-                <img className="" src={filme.posterImageUrl} />
+                <img className="" src={filme.posterImageUrl ?? undefined} />
               </Link>
             </li>
           ))}
