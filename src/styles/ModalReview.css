@@ -34,6 +34,7 @@
 }
 .submit-create-review {
   align-self: flex-end;
+  cursor: pointer;
 }
 
 .titulo-create-review {

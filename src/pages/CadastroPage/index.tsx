@@ -120,8 +120,6 @@ export default function Cadastro() {
                 <p className="cadastro-error">{errors.telefone.message}</p>
               )}
             </div>
-
-            {/* SENHA */}
             <div>
               <label>Senha</label>
 
@@ -155,7 +153,6 @@ export default function Cadastro() {
               )}
             </div>
 
-            {/* ERRO DA API */}
             {cadastroMutation.isError && (
               <p className="cadastro-error">
                 Não foi possível realizar o cadastro.
