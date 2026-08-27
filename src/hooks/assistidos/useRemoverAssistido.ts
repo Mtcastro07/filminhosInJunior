@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { removerAssistido } from "../services/listas";
+import { removerAssistido } from "../../services/listas";
 
 export function useRemoverAssistido() {
   const queryClient = useQueryClient();

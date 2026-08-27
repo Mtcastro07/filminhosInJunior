@@ -1,15 +1,15 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { criarReview } from "../services/reviews";
+import { removerFavorito } from "../../services/listas";
 
-export function useCriarReview(movieId: number) {
+export function useRemoverFavorito() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: criarReview,
+    mutationFn: removerFavorito,
 
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["reviews", movieId],
+        queryKey: ["favoritos"],
       });
     },
   });

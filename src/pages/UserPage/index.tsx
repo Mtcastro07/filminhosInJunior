@@ -4,10 +4,7 @@ import "./user.css";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import CarrosselFilmes from "../../components/CarrosselFIlmes";
-import { usePerfil } from "../../hooks/usePerfil";
-import { useFavoritos } from "../../hooks/useFavoritos";
-import { useAssistidos } from "../../hooks/useAssistidos";
-import { useMinhasReviews } from "../../hooks/useMinhasReviews";
+import { usePerfil, useFavoritos, useAssistidos, useMinhasReviews } from "../../hooks";
 
 export default function UserPage() {
   const { data: user } = usePerfil();

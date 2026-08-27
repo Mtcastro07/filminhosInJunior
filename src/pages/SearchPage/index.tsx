@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 import { listarFilmes } from "../../services/filmes";
-import type { Filme } from "../../services/filmes";
+import type { Filme } from "../../types/filmes";
 import { Link } from "react-router-dom";
 import { listarGeneros } from "../../services/generos";
-import type { genero } from "../../services/generos";
+import type { genero } from "../../types/generos";
 
 export default function searchPage() {
   const [filmes, setFilmes] = useState<Filme[]>([]);

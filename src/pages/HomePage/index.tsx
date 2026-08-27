@@ -2,7 +2,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import "./homePage.css";
 import { listarReviewsTotal } from "../../services/filmes";
-import type { filmeReview } from "../../services/filmes";
+import type { filmeReview } from "../../types/filmes";
 import CarrosselCategoria from "../../components/CarrosselCategoria";
 import HeroCarrossel from "../../components/HeroCarrossel";
 import { useEffect, useState } from "react";

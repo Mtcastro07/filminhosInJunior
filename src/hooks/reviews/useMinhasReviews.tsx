@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { listarMinhasReviews } from "../services/reviews";
+import { listarMinhasReviews } from "../../services/reviews";
 
 export function useMinhasReviews() {
   return useQuery({

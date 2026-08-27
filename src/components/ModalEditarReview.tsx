@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { filmeReview } from "../services/filmes";
-import { useEditarReview } from "../hooks/useEditarReview";
+import type { filmeReview } from "../types/filmes";
+import { useEditarReview } from "../hooks";
 import "../styles/ModalEditarReview.css";
 
 interface ModalEditarReviewProps {

@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { editarReview } from "../services/reviews";
+import { editarReview } from "../../services/reviews";
 
 export function useEditarReview() {
   const queryClient = useQueryClient();

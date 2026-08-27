@@ -1,5 +1,5 @@
 import { api } from "./api";
-import type { Filme, Metadata } from "./filmes";
+import type { Filme, Metadata } from "../types/filmes";
 
 interface RespostaFavoritos {
   data: Filme[];

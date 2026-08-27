@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { buscarProfile } from "../services/auth";
-import { useAuthStore } from "../stores/authStore";
+import { buscarProfile } from "../../services/auth";
+import { useAuthStore } from "../../stores/authStore";
 
 export function useProfile() {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
