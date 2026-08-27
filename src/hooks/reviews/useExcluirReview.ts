@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { excluirReview } from "../services/reviews";
+import { excluirReview } from "../../services/reviews";
 
 export function useExcluirReview() {
   const queryClient = useQueryClient();

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Filme } from "../services/filmes";
+import type { Filme } from "../types/filmes";
 import { listarFilmesDestaque } from "../services/filmes";
 import "../styles/HeroCarrossel.css";
 import { Link } from "react-router-dom";

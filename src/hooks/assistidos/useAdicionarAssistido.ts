@@ -1,17 +1,17 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { adicionarFavorito } from "../services/listas";
+import { adicionarAssistido } from "../../services/listas";
 
-export function useAdicionarFavorito() {
+export function useAdicionarAssistido() {
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: (movieId: number) => {
-      return adicionarFavorito(movieId);
+      return adicionarAssistido(movieId);
     },
 
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["favoritos"],
+        queryKey: ["assistidos"],
       });
 
       queryClient.invalidateQueries({

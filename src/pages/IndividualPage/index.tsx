@@ -4,14 +4,12 @@ import Header from "../../components/header";
 import { useParams } from "react-router-dom";
 import { listarFilme } from "../../services/filmes";
 import { useEffect, useState } from "react";
-import type { filmeIndividual } from "../../services/filmes";
-import type { filmeReview } from "../../services/filmes";
+import type { filmeIndividual } from "../../types/filmes";
+import type { filmeReview } from "../../types/filmes";
 import { listarReviewsFilme } from "../../services/filmes";
 import ModalReview from "../../components/ModalReview";
-import { useAdicionarFavorito } from "../../hooks/useAdicionarFavorito";
-import { useRemoverFavorito } from "../../hooks/useRemoverFavorito";
-import { useAdicionarAssistido } from "../../hooks/useAdicionarAssistido";
-import { useRemoverAssistido } from "../../hooks/useRemoverAssistido";
+import { useAdicionarFavorito, useRemoverFavorito } from "../../hooks";
+import { useAdicionarAssistido, useRemoverAssistido } from "../../hooks";
 
 export function IndividualPage() {
   const [modalAberto, setModalAberto] = useState(false);

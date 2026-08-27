@@ -1,43 +1,11 @@
 import { api } from "./api";
-import type { Filme, Metadata } from "./filmes";
-import type { filmeReview } from "./filmes";
+import type { Filme, Metadata, filmeReview } from "../types/filmes";
+import type { DadosCriarReview, DadosEditarReview, Review, UsuarioReview, RespostaMinhasReviews } from "../types/reviews";
 
-export interface RespostaMinhasReviews {
-  data: filmeReview[];
-  metadata: Metadata;
-}
-
-export interface UsuarioReview {
-  id: number;
-  fullName: string;
-  avatarUrl: string | null;
-  initials: string;
-}
-
-export interface Review {
-  id: number;
-  rating: number;
-  text: string;
-  createdAt: string;
-  updatedAt: string;
-
-  user: UsuarioReview;
-  movie: Filme;
-}
+export type { RespostaMinhasReviews, UsuarioReview, Review, DadosCriarReview, DadosEditarReview } from "../types/reviews";
 
 interface RespostaReview {
   data: Review;
-}
-
-export interface DadosCriarReview {
-  movieId: number;
-  rating: number;
-  text: string;
-}
-
-export interface DadosEditarReview {
-  rating: number;
-  text: string;
 }
 
 export async function criarReview(dados: DadosCriarReview) {

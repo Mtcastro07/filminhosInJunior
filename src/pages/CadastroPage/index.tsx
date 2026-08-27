@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useCadastro } from "../../hooks/useCadastro";
+import { useCadastro } from "../../hooks";
 
 const registerUserSchema = z.object({
   name: z.string().min(3, "O nome deve possuir no mínimo 3 caracteres"),

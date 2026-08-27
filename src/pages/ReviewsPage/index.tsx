@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
-import { useMinhasReviews } from "../../hooks/useMinhasReviews";
+import { useMinhasReviews } from "../../hooks";
 import "./review.css";
 import { useState } from "react";
-import { useExcluirReview } from "../../hooks/useExcluirReview";
-import type { filmeReview } from "../../services/filmes";
+import { useExcluirReview } from "../../hooks";
+import type { filmeReview } from "../../types/filmes";
 import ModalEditarReview from "../../components/ModalEditarReview";
 
 export default function ReviewsPage() {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { listarFilmes } from "../services/filmes";
-import type { Filme } from "../services/filmes";
+import type { Filme } from "../types/filmes";
 import "../styles/CarosselCategoria.css";
 
 interface Props {

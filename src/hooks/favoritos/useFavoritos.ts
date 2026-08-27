@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { listarFavoritos } from "../services/listas";
+import { listarFavoritos } from "../../services/listas";
 
 export function useFavoritos(search: string = "") {
   return useQuery({

@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
-import { useAssistidos } from "../../hooks/useAssistidos";
-import { useRemoverAssistido } from "../../hooks/useRemoverAssistido";
+import { useAssistidos, useRemoverAssistido } from "../../hooks";
 
 import "./watched.css";
 

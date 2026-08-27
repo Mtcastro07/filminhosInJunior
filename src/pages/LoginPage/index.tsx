@@ -4,7 +4,7 @@ import "./login.css";
 import { Link } from "react-router-dom";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useLogin } from "../../hooks/useLogin";
+import { useLogin } from "../../hooks";
 import { useNavigate } from "react-router-dom";
 
 const createUserSchema = z.object({

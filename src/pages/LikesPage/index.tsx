@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
-import { useFavoritos } from "../../hooks/useFavoritos";
-import { useRemoverFavorito } from "../../hooks/useRemoverFavorito";
+import { useFavoritos, useRemoverFavorito } from "../../hooks";
 import "./liked.css";
 
 export default function FavoritosPage() {

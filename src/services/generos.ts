@@ -1,9 +1,7 @@
 import { api } from "./api";
+import type { genero } from "../types/generos";
 
-export interface genero {
-  id: number;
-  name: string;
-}
+export type { genero } from "../types/generos";
 
 interface RespostaGeneros {
   data: genero[];

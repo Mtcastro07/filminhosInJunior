@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { Filme } from "../services/filmes";
+import type { Filme } from "../types/filmes";
 import "../styles/CarrosselFilmes.css";
 import { useState } from "react";
 

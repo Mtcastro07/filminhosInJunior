@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { listarReviewsFilme } from "../services/filmes";
+import { listarReviewsFilme } from "../../services/filmes";
 
 export function useReviewsFilme(movieId: number) {
   return useQuery({

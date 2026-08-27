@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCriarReview } from "../hooks/useCriarReview";
+import { useCriarReview } from "../hooks";
 import "../styles/ModalReview.css";
 
 interface ModalReviewProps {
